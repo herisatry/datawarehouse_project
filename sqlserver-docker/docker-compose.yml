@@ -1,0 +1,24 @@
+version: "3.9"
+
+services:
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: sqlserver
+    hostname: sqlserver
+
+    ports:
+      - "1433:1433"
+
+    environment:
+      ACCEPT_EULA: "Y"
+      MSSQL_SA_PASSWORD: "StrongPassword123!"
+      TZ: "Europe/Berlin"
+
+    volumes:
+      - sqlserver_data:/var/opt/mssql
+      - ./backups:/var/opt/mssql/backups
+
+    restart: unless-stopped
+
+volumes:
+  sqlserver_data:
