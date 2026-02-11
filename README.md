@@ -38,19 +38,19 @@ The data warehouse uses three schema layers in `datawarehouse_db`:
 ```
 DWH_PROJ/
 +-- dataset/                    # Source CSV files
-¦   +-- source_crm/            # CRM system exports
-¦   +-- source_erp/            # ERP system exports
+    +-- source_crm/            # CRM system exports
+    +-- source_erp/            # ERP system exports
 +-- on_premise/                 # On-premise SQL Server implementation
-¦   +-- docs/                  # Requirements documentation
-¦   +-- scripts/               # SQL scripts
-¦   ¦   +-- init.sql          # Database and schema creation
-¦   ¦   +-- bronze layer/     # Bronze layer scripts
-¦   +-- test/                  # Test scripts
+    +-- docs/                  # Requirements documentation
+    +-- scripts/               # SQL scripts
+        +-- init.sql          # Database and schema creation
+        +-- bronze layer/     # Bronze layer scripts
+    +-- test/                  # Test scripts
 +-- cloud_based/               # Cloud implementation (future)
 +-- sqlserver-docker/          # Docker setup for local development
-¦   +-- docker-compose.yml    # SQL Server container config
-¦   +-- backups/              # Database backup storage
-¦   +-- scripts/              # Container initialization scripts
+    +-- docker-compose.yml    # SQL Server container config
+    +-- backups/              # Database backup storage
+    +-- scripts/              # Container initialization scripts
 +-- docs/                      # Project documentation
 ```
 
