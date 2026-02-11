@@ -17,6 +17,7 @@ services:
     volumes:
       - sqlserver_data:/var/opt/mssql
       - ./backups:/var/opt/mssql/backups
+      - ../dataset:/var/opt/mssql/dataset
 
     restart: unless-stopped
 
